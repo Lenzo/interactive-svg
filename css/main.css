@@ -6,6 +6,7 @@
 
 html {
   box-sizing: border-box;
+
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -14,4 +15,25 @@ html {
 
 *, *::before, *::after {
   box-sizing: inherit;
+}
+
+.ears {
+	transform: translateY(0px);
+	transform-origin: center;
+	transition: all .5s linear;
+}
+
+.bear:hover .ears{
+	transform: translateY(-10px);
+}
+
+.eyes {
+	animation: shifty-eye 1s linear infinite alternate;
+}
+
+@keyframes shifty-eye {
+	0% { transform: translateX(-10px); }
+	100% { transform: translateX(10px); 
+	}
+
 }
